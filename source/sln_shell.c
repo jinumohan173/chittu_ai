@@ -1795,7 +1795,7 @@ int sln_shell_init(void)
 
     /* Init SHELL */
     s_shellHandle = &s_shellHandleBuffer[0];
-    SHELL_Init(s_shellHandle, s_serialHandle, "SHELL>> ");
+    SHELL_Init(s_shellHandle, s_serialHandle, "SHELLoombi>> ");
 
     /* Add the SLN commands to the commands list */
     SHELL_RegisterCommand(s_shellHandle, SHELL_COMMAND(reset));
