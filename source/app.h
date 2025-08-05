@@ -55,7 +55,7 @@
 #define DEFAULT_SPEAKER_VOLUME         55
 
 /* Enable usb audio dump by setting this define on 1 */
-#define ENABLE_USB_AUDIO_DUMP          0
+#define ENABLE_USB_AUDIO_DUMP          1  //0 it was zero  by default
 
 /* Max wake word length. Might consider switching to 1500
  * for shorter wake words. We are using 3seconds to accommodate
