@@ -17,9 +17,35 @@
 #include "stddef.h"
 
 #include "PL_platformTypes_CortexM.h"
-#include "VIT_Model_en_Elevator.h"
-#include "VIT_Model_en_WashingMachine.h"
-#include "VIT_Model_en_SmartHome.h"
+
+
+
+
+#include "PL_platformTypes_CortexM.h"
+#include "VIT_Model_en.h"
+
+
+
+const sln_voice_demo_t test_demo_en =
+{
+    ww_en,                          // wake word strings
+    cmd_test_demo_en,               // command strings
+    actions_ww_en,                  // wake word actions
+    actions_test_demo_en,           // command actions
+    prompts_ww_en,                  // wake word prompts
+    prompts_test_demo_en,           // command prompts
+    NULL,                           // prompt for demo announcement
+    NUM_ELEMENTS(ww_en),            // number of wake words
+    NUM_ELEMENTS(cmd_test_demo_en), // number of commands
+    (void *)VIT_Model_en,           // pointer to model
+    ASR_ENGLISH,                    // what language is used
+    ASR_CMD_TEST_DEMO,              // what demo is used
+    LANG_STR_EN,                    // language string
+    DEMO_STR_TEST_DEMO,             // demo string
+};
+
+
+
 
 const sln_voice_demo_t demo_elevator_en =
 {
@@ -32,7 +58,7 @@ const sln_voice_demo_t demo_elevator_en =
 		AUDIO_ELEVATOR_DEMO_EN,
 		NUM_ELEMENTS(ww_en),
 		NUM_ELEMENTS(cmd_elevator_en),
-		(void *)VIT_Model_en_elevator,
+		//(void *)VIT_Model_en_elevator,
 		ASR_ENGLISH,
 		ASR_CMD_ELEVATOR,
 		LANG_STR_EN,
@@ -50,7 +76,7 @@ const sln_voice_demo_t demo_washing_machine_en =
 		AUDIO_WASHING_MACHINE_DEMO_EN,
 		NUM_ELEMENTS(ww_en),
 		NUM_ELEMENTS(cmd_washing_machine_en),
-		(void *)VIT_Model_en_washingmachine,
+		//(void *)VIT_Model_en_washingmachine,
 		ASR_ENGLISH,
 		ASR_CMD_WASHING_MACHINE,
 		LANG_STR_EN,
@@ -68,7 +94,7 @@ const sln_voice_demo_t demo_smart_home_en =
 		AUDIO_SMART_HOME_DEMO_EN,
 		NUM_ELEMENTS(ww_en),
 		NUM_ELEMENTS(cmd_smart_home_en),
-		(void *)VIT_Model_en_smarthome,
+
 		ASR_ENGLISH,
 		ASR_CMD_SMART_HOME,
 		LANG_STR_EN,

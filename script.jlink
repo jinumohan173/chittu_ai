@@ -1,0 +1,7 @@
+ExitOnError 1
+r
+h
+loadfile "E:\chittu_ai\sln_svui_iot_local_demo\Debug\sln_svui_iot_local_demo.hex"
+qc
+
+qc

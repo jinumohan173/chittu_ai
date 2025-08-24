@@ -15,6 +15,15 @@ const void * const prompts_ww_en[] = {
     AUDIO_WW_DETECTED, // "Hey NXP"
 };
 
+
+const void * const prompts_test_demo_en[] = {
+    AUDIO_OK_EN, // "Mute"
+    AUDIO_OK_EN, // "Next"
+    AUDIO_OK_EN, // "Skip"
+    AUDIO_OK_EN, // "Pause"
+    AUDIO_OK_EN, // "Stop"
+};
+
 const void * const prompts_elevator_en[] = {
     AUDIO_FIRST_FLOOR_EN,    // "First floor"
     AUDIO_SECOND_FLOOR_EN,   // "Second floor"

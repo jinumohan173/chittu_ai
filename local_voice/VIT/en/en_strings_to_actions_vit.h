@@ -16,6 +16,15 @@ const int16_t actions_ww_en[] = {
     kWakeWord_Detected, // "Hey NXP"
 };
 
+
+const int16_t actions_test_demo_en[] = {
+    kTestDemo_Mute,  // "Mute"
+    kTestDemo_Next,  // "Next"
+    kTestDemo_Skip,  // "Skip"
+    kTestDemo_Pause, // "Pause"
+    kTestDemo_Stop,  // "Stop"
+};
+
 const int16_t actions_elevator_en[] = {
     kElevator_FirstFloor,     // "First floor"
     kElevator_SecondFloor,    // "Second floor"

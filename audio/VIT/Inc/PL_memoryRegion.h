@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+
 /** @file
  *  Header file defining the standard PL_types for use in the application layer
  *  interface of VIT module

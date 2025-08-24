@@ -5,7 +5,7 @@
  */
 
 /* Application version */
-#define APP_MAJ_VER                    0x02
+#define APP_MAJ_VER                    0x03
 #define APP_MIN_VER                    0x00
 #define APP_BLD_VER                    0x0000
 
@@ -15,8 +15,8 @@
 
 /* Choose the ASR engine: DSMT, VIT or S2I */
 #define ENABLE_DSMT_ASR                0
-#define ENABLE_VIT_ASR                 0
-#define ENABLE_S2I_ASR                 1
+#define ENABLE_VIT_ASR                 1
+#define ENABLE_S2I_ASR                 0
 
 #if ENABLE_DSMT_ASR
 /* Set USE_DSMT_EVALUATION_MODE to 1 when using DSMT evaluation library.
@@ -55,7 +55,7 @@
 #define DEFAULT_SPEAKER_VOLUME         55
 
 /* Enable usb audio dump by setting this define on 1 */
-#define ENABLE_USB_AUDIO_DUMP          1  //0 it was zero  by default
+#define ENABLE_USB_AUDIO_DUMP          0 //it was zero  by default
 
 /* Max wake word length. Might consider switching to 1500
  * for shorter wake words. We are using 3seconds to accommodate
@@ -69,7 +69,7 @@
 /* Enable NXP out of the box experience. If set to 0,
  * no demo change or language change available through voice commands,
  * but these actions will still be possible through shell commands. */
-#define ENABLE_NXP_OOBE                1
+#define ENABLE_NXP_OOBE                0//1 by defualt
 
 /* Enable amplifier, i.e. audio prompts played on the speaker.
  * Currently the implementation includes playing OPUS encoded

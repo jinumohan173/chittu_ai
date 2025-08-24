@@ -15,13 +15,10 @@
  * The code assumes one bit allocation per definition */
 typedef enum _asr_languages
 {
-    UNDEFINED_LANGUAGE = 0,
-    ASR_FIRST_LANGUAGE = (1U << 0U),
-    ASR_ENGLISH        = (1U << 0U),
-    ASR_CHINESE        = (1U << 1U),
-    ASR_GERMAN         = (1U << 2U),
-    ASR_FRENCH         = (1U << 3U),
-    ASR_ALL_LANG       = (ASR_ENGLISH | ASR_CHINESE | ASR_GERMAN | ASR_FRENCH)
+	   UNDEFINED_LANGUAGE = 0,
+	    ASR_FIRST_LANGUAGE = (1U << 0U),
+	    ASR_ENGLISH = (1U << 0U),
+	    ASR_ALL_LANG = (ASR_ENGLISH)
 } asr_language_t;
 
 /* Enumeration of the command sets integrated into the project
@@ -32,10 +29,14 @@ typedef enum _asr_inference
 {
     UNDEFINED_INFERENCE     = 0,
     ASR_WW                  = (1U << 0U),
+	 ASR_CMD_TEST_DEMO = (1U << 1U),
     ASR_CMD_CHANGE_DEMO     = (1U << 1U),
     ASR_CMD_ELEVATOR        = (1U << 2U),
     ASR_CMD_WASHING_MACHINE = (1U << 3U),
     ASR_CMD_SMART_HOME      = (1U << 4U),
+
+
+
     ASR_CMD_INVALID_DEMO
 } asr_inference_t;
 
@@ -43,13 +44,13 @@ typedef enum _asr_inference
 #define MULTILINGUAL               (0)
 
 /* demo after first boot. can be used for selecting the demo at the very first board boot */
-#define BOOT_ASR_CMD_DEMO          ASR_CMD_CHANGE_DEMO
+#define BOOT_ASR_CMD_DEMO          ASR_CMD_TEST_DEMO//ASR_CMD_CHANGE_DEMO
 
 /* default demo. this can have the same value as BOOT_ASR_CMD_DEMO
  * in our POC we use BOOT_ASR_CMD_DEMO to give the possibility to the user to select the demo
  * via voice commands. If a selection is not made until the timeout is hit, then
  * DEFAULT_ASR_CMD_DEMO will be loaded */
-#define DEFAULT_ASR_CMD_DEMO       ASR_CMD_SMART_HOME
+#define DEFAULT_ASR_CMD_DEMO      ASR_CMD_TEST_DEMO// ASR_CMD_SMART_HOME
 
 /* default language */
 #define DEFAULT_ASR_LANGUAGE       ASR_ENGLISH
@@ -67,8 +68,13 @@ typedef enum _asr_inference
 #define DEMO_STR_WASHING     "wash"
 #define DEMO_STR_SMART_HOME  "smart"
 
-#define SHELL_SELECTABLE_DEMOS DEMO_STR_ELEVATOR " " DEMO_STR_WASHING " " DEMO_STR_SMART_HOME
-#define SHELL_SELECTABLE_LANGUAGES LANG_STR_CN " " LANG_STR_DE " " LANG_STR_EN " " LANG_STR_FR
+#define DEMO_STR_TEST_DEMO "test"
+
+#define SHELL_SELECTABLE_DEMOS DEMO_STR_TEST_DEMO
+#define SHELL_SELECTABLE_LANGUAGES LANG_STR_EN
+
+//#define SHELL_SELECTABLE_DEMOS DEMO_STR_ELEVATOR " " DEMO_STR_WASHING " " DEMO_STR_SMART_HOME
+//#define SHELL_SELECTABLE_LANGUAGES LANG_STR_CN " " LANG_STR_DE " " LANG_STR_EN " " LANG_STR_FR
 
 #endif /* ENABLE_VIT_ASR */
 #endif /* DEMO_DEFINITIONS_VIT_H_ */

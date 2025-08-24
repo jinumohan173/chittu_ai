@@ -17,6 +17,17 @@ enum _wake_word_action
     kWakeWord_ActionInvalid
 };
 
+enum _test_demo_action
+{
+    kTestDemo_Mute = 0,
+    kTestDemo_Next,
+    kTestDemo_Skip,
+    kTestDemo_Pause,
+    kTestDemo_Stop,
+    kTestDemo_Invalid
+};
+
+
 enum _elevator_action
 {
     kElevator_FirstFloor = 0,

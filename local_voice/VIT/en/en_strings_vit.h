@@ -12,7 +12,17 @@
 /* English demos strings below */
 
 const char * const  ww_en[] = {
-        "Hey NXP",
+        "Hey POLLACK",
+
+};
+
+
+const char * const cmd_test_demo_en[] = {
+    "Mute",
+    "Next",
+    "Skip",
+    "Pause",
+    "Stop",
 };
 
 const char * const  cmd_elevator_en[] = {
